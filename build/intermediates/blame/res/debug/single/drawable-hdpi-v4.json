@@ -112,12 +112,12 @@
         "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\drawable-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\message_input_emotion.png",
-        "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\drawable-hdpi\\message_input_emotion.png"
-    },
-    {
         "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\light_app_loading.png",
         "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\drawable-hdpi\\light_app_loading.png"
+    },
+    {
+        "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\message_input_emotion.png",
+        "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\drawable-hdpi\\message_input_emotion.png"
     },
     {
         "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\g_green_btn_disable.png",

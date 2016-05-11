@@ -1,3 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="C:\Users\edl\Desktop\FindMyPhone\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="8644bf42605b4ca49b8970f3cc8fce7001186829">
+        <dex dex="C:\Users\edl\Desktop\FindMyPhone\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_252acacb183fbca9f9cff81b87af43e2a9a94c04\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\edl\Desktop\FindMyPhone\libs\gson-2.3.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="5fc52c41ef0239d1093a1eb7c3697036183677ce">
+        <dex dex="C:\Users\edl\Desktop\FindMyPhone\build\intermediates\transforms\dex\debug\folders\1000\2\gson-2.3_8fd93a89b026d5a2aeb7dade7c17d049cc8c1400\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\edl\Desktop\FindMyPhone\libs\httpmime-4.2.5.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="412b9914d0adec6d5716df1ada8acbc4f6f2dd37">
+        <dex dex="C:\Users\edl\Desktop\FindMyPhone\build\intermediates\transforms\dex\debug\folders\1000\2\httpmime-4.2.5_bd49d6780e8e846fc6420bcc84792e936430f849\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\edl\Desktop\FindMyPhone\libs\android-async-http-1.4.6.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="a845a88238be0b5be9d238652c1bc0605ef91f52">
+        <dex dex="C:\Users\edl\Desktop\FindMyPhone\build\intermediates\transforms\dex\debug\folders\1000\2\android-async-http-1.4.6_167f3c31fe954d7314595815684900dd1cbde1d9\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\edl\Desktop\FindMyPhone\libs\pinyin4j-2.5.0.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="ae353005f973da1cd8545b54354504c2503f6865">
+        <dex dex="C:\Users\edl\Desktop\FindMyPhone\build\intermediates\transforms\dex\debug\folders\1000\2\pinyin4j-2.5.0_42e6f4166dfc123b97612c4391eac2cf360341dd\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\edl\Desktop\FindMyPhone\libs\slf4j-android-1.6.1-RC1.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="fe76e182946faad493a50968f3344e848b467b42">
+        <dex dex="C:\Users\edl\Desktop\FindMyPhone\build\intermediates\transforms\dex\debug\folders\1000\2\slf4j-android-1.6.1-RC1_4593ec4e0d6f788cf67d94b32233eb4ae97fec6c\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\edl\Desktop\FindMyPhone\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="e15db0697111e54593971da7746bc25e131394fc">
+        <dex dex="C:\Users\edl\Desktop\FindMyPhone\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_0542fd2d418902ea80e6a635926afe2708a5d371\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\edl\Desktop\FindMyPhone\libs\android-support-v4.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="48c94ae70fa65718b382098237806a5909bb096e">
+        <dex dex="C:\Users\edl\Desktop\FindMyPhone\build\intermediates\transforms\dex\debug\folders\1000\2\android-support-v4_3646ab46fe4b3b52170dba0fa5a5c04521a07b45\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\edl\Desktop\FindMyPhone\libs\mina-core-2.0.7.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="c878e2aa82de748474a624ec3933e4604e446dec">
+        <dex dex="C:\Users\edl\Desktop\FindMyPhone\build\intermediates\transforms\dex\debug\folders\1000\2\mina-core-2.0.7_6e6fd35391690f741a7e8feac10a5a737dfa64bd\classes.dex" />
+    </item>
+
+</items>

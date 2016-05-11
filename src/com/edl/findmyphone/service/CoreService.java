@@ -1,10 +1,12 @@
 package com.edl.findmyphone.service;
 
-import java.util.HashMap;
-import java.util.Map;
-
-
-
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.net.ConnectivityManager;
+import android.os.IBinder;
+import android.util.Log;
 
 import com.edl.findmyphone.R;
 import com.edl.findmyphone.action.Action;
@@ -16,14 +18,8 @@ import com.edl.findmyphone.lib.HMChatManager.HMConnectListener;
 import com.edl.findmyphone.lib.HMChatManager.OnPushListener;
 import com.edl.findmyphone.uitls.CommonUtil;
 
-
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
-import android.net.ConnectivityManager;
-import android.os.IBinder;
-import android.util.Log;
+import java.util.HashMap;
+import java.util.Map;
 
 public class CoreService extends BaseService implements HMConnectListener,
 		OnPushListener {
@@ -167,11 +163,12 @@ public class CoreService extends BaseService implements HMConnectListener,
 	public boolean onPush(String action, Map<String, Object> data) {
 		Log.d("Core", "action : " + action + " data : " + data);
 
+		boolean flag = false;
 		Action actioner = actionMaps.get(action);
 		if (actioner != null) {
-			actioner.doAction(this, data);
+			flag =actioner.doAction(this, data);
 		}
 
-		return true;
+		return flag;
 	}
 }
