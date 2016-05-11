@@ -1,12 +1,3 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" >
+<items version="2" />
 
-    <item
-        jar="C:\Users\edl\Desktop\FindMyPhone\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="b1c055539d81aacfa6eb462b4939b47aa284c94b">
-        <dex dex="C:\Users\edl\Desktop\FindMyPhone\build\intermediates\pre-dexed\debug\instant-run-bootstrap_252acacb183fbca9f9cff81b87af43e2a9a94c04.jar" />
-    </item>
-
-</items>

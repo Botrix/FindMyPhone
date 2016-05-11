@@ -110,18 +110,19 @@ public final class R {
         public static final int welcome_page=0x7f020046;
     }
     public static final class id {
-        public static final int action_settings=0x7f0b000b;
+        public static final int action_settings=0x7f0b000c;
         public static final int activity_login_top_bar=0x7f0b0000;
-        public static final int bar_action=0x7f0b0004;
-        public static final int bar_back=0x7f0b0002;
-        public static final int bar_title=0x7f0b0003;
-        public static final int btn_sign_in=0x7f0b0005;
-        public static final int btn_sign_up=0x7f0b0006;
+        public static final int bar_action=0x7f0b0005;
+        public static final int bar_back=0x7f0b0003;
+        public static final int bar_title=0x7f0b0004;
+        public static final int btn_sign_in=0x7f0b0006;
+        public static final int btn_sign_up=0x7f0b0007;
         public static final int contanier_login=0x7f0b0001;
-        public static final int et_sign_in_account=0x7f0b0007;
-        public static final int et_sign_in_pwd=0x7f0b0008;
-        public static final int et_sign_up_account=0x7f0b0009;
-        public static final int et_sign_up_pwd=0x7f0b000a;
+        public static final int et_sign_in_account=0x7f0b0008;
+        public static final int et_sign_in_pwd=0x7f0b0009;
+        public static final int et_sign_up_account=0x7f0b000a;
+        public static final int et_sign_up_pwd=0x7f0b000b;
+        public static final int locInfoView=0x7f0b0002;
     }
     public static final class layout {
         public static final int act_login=0x7f030000;
