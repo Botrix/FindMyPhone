@@ -1,0 +1,4 @@
+CHANGED,C:\Users\edl\Desktop\FindMyPhone\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\edl\findmyphone\ChatApplication$override.class
+CHANGED,C:\Users\edl\Desktop\FindMyPhone\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
+CHANGED,C:\Users\edl\Desktop\FindMyPhone\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\edl\findmyphone\MainActivity$override.class
+CHANGED,C:\Users\edl\Desktop\FindMyPhone\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\edl\findmyphone\MainActivity$1$override.class
