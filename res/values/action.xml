@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="actions">
+        <item>action.LocationAction</item>
+        <item>action.ClearDataAction</item>
+        <item>action.ShowMessageAction</item>
+        <item>action.LockScreenAction</item>
+    </string-array>
+
+</resources>

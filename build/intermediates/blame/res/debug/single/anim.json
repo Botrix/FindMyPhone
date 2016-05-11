@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\anim\\fragment_slide_right_enter.xml",
+        "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\anim\\fragment_slide_right_enter.xml"
+    },
+    {
+        "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\anim\\fragment_slide_left_exit.xml",
+        "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\anim\\fragment_slide_left_exit.xml"
+    },
+    {
+        "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\anim\\fragment_slide_right_exit.xml",
+        "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\anim\\fragment_slide_right_exit.xml"
+    },
+    {
+        "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\anim\\decelerate_quint.xml",
+        "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\anim\\decelerate_quint.xml"
+    },
+    {
+        "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\anim\\fragment_slide_left_enter.xml",
+        "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\anim\\fragment_slide_left_enter.xml"
+    }
+]

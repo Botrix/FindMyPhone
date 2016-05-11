@@ -1,0 +1,66 @@
+[
+    {
+        "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\drawable\\loading_circle_big.xml",
+        "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\drawable\\loading_circle_big.xml"
+    },
+    {
+        "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\drawable\\login_shape_input_focus.xml",
+        "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\drawable\\login_shape_input_focus.xml"
+    },
+    {
+        "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_item_selector.xml",
+        "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\drawable\\btn_item_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_green_selector.xml",
+        "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\drawable\\btn_green_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\drawable\\loading_circle.xml",
+        "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\drawable\\loading_circle.xml"
+    },
+    {
+        "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\drawable\\edit_selector.xml",
+        "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\drawable\\edit_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\drawable\\login_shape_input_normal.xml",
+        "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\drawable\\login_shape_input_normal.xml"
+    },
+    {
+        "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_gray_selector.xml",
+        "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\drawable\\btn_gray_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_add_friend_selector.xml",
+        "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\drawable\\btn_add_friend_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_send_selector.xml",
+        "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\drawable\\btn_send_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_back_selector.xml",
+        "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\drawable\\btn_back_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\drawable\\login_selector_input.xml",
+        "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\drawable\\login_selector_input.xml"
+    },
+    {
+        "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_list_selector.xml",
+        "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\drawable\\btn_list_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_delete_search_selector.xml",
+        "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\drawable\\btn_delete_search_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_warning_selector.xml",
+        "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\drawable\\btn_warning_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\drawable\\rect_loading.xml",
+        "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\drawable\\rect_loading.xml"
+    }
+]
