@@ -20,7 +20,9 @@ public class ClearDataAction extends Action {
 		String receiver = data.get("receiver").toString();
 		String sender = data.get("sender").toString();
 
-		return true;
+		
+       return true;
+
 	}
 
 }

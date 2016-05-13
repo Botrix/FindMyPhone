@@ -1,16 +1,13 @@
 package com.edl.findmyphone.widget;
 
-
-
-
-import com.edl.findmyphone.R;
-
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.edl.findmyphone.R;
 
 public class NormalTopBar extends RelativeLayout {
 	private ImageView ivBack;

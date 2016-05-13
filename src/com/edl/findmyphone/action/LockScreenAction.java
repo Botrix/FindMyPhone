@@ -20,7 +20,9 @@ public class LockScreenAction extends Action {
 		String receiver = data.get("receiver").toString();
 		String sender = data.get("sender").toString();
 
-		return true;
+		String password = data.get("content").toString();//锁屏密码
+		
+       return true;
 
 	}
 

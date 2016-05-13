@@ -2,18 +2,6 @@ package com.edl.findmyphone.fragment;
 
 
 
-import com.edl.findmyphone.MainActivity;
-import com.edl.findmyphone.R;
-import com.edl.findmyphone.base.BaseFragment;
-import com.edl.findmyphone.db.AccountDao;
-import com.edl.findmyphone.domain.Account;
-import com.edl.findmyphone.lib.HMChatManager;
-import com.edl.findmyphone.lib.HMError;
-import com.edl.findmyphone.service.CoreService;
-import com.edl.findmyphone.uitls.CommonUtil;
-import com.edl.findmyphone.uitls.ToastUtil;
-import com.edl.lib.findmyphone.callback.HMObjectCallBack;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,6 +14,18 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.edl.findmyphone.MainActivity;
+import com.edl.findmyphone.R;
+import com.edl.findmyphone.base.BaseFragment;
+import com.edl.findmyphone.db.AccountDao;
+import com.edl.findmyphone.domain.Account;
+import com.edl.findmyphone.lib.HMChatManager;
+import com.edl.findmyphone.lib.HMError;
+import com.edl.findmyphone.service.CoreService;
+import com.edl.findmyphone.uitls.CommonUtil;
+import com.edl.findmyphone.uitls.ToastUtil;
+import com.edl.lib.findmyphone.callback.HMObjectCallBack;
+
 public class SignInFra extends BaseFragment implements OnClickListener {
 	private String TAG = "SignInFra";
 
@@ -37,6 +37,7 @@ public class SignInFra extends BaseFragment implements OnClickListener {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.fra_sign_in, container, false);
+
 		initView(view);
 		initEvent();
 		return view;
@@ -107,13 +108,9 @@ public class SignInFra extends BaseFragment implements OnClickListener {
 						// 开启服务
 						if (!CommonUtil.isServiceRunning(getActivity(),
 								CoreService.class)) {
-							getActivity().startService(
-									new Intent(getActivity(),
-											CoreService.class));
+							getActivity().startService(new Intent(getActivity(), CoreService.class));
 						}
 
-					
-				
 
 						startActivity(new Intent(getActivity(),
 								MainActivity.class));

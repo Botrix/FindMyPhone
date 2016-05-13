@@ -94,6 +94,7 @@
                 </action>
             </intent-filter>
         </service>
+
         <!--
          <service android:name="com.edl.findmyphone.service.BackgroundService" >
          </service>

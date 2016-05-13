@@ -1,17 +1,6 @@
 package com.edl.findmyphone.fragment;
 
 
-import com.edl.findmyphone.R;
-import com.edl.findmyphone.base.BaseFragment;
-import com.edl.findmyphone.db.AccountDao;
-import com.edl.findmyphone.domain.Account;
-import com.edl.findmyphone.lib.HMChatManager;
-import com.edl.findmyphone.lib.HMError;
-import com.edl.findmyphone.service.CoreService;
-import com.edl.findmyphone.uitls.CommonUtil;
-import com.edl.findmyphone.uitls.ToastUtil;
-import com.edl.lib.findmyphone.callback.HMObjectCallBack;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,6 +12,18 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.edl.findmyphone.MainActivity;
+import com.edl.findmyphone.R;
+import com.edl.findmyphone.base.BaseFragment;
+import com.edl.findmyphone.db.AccountDao;
+import com.edl.findmyphone.domain.Account;
+import com.edl.findmyphone.lib.HMChatManager;
+import com.edl.findmyphone.lib.HMError;
+import com.edl.findmyphone.service.CoreService;
+import com.edl.findmyphone.uitls.CommonUtil;
+import com.edl.findmyphone.uitls.ToastUtil;
+import com.edl.lib.findmyphone.callback.HMObjectCallBack;
 
 public class SignUpFra extends BaseFragment implements OnClickListener {
 	private String TAG = "SignUpFra";
@@ -105,11 +106,13 @@ public class SignUpFra extends BaseFragment implements OnClickListener {
 						if (!CommonUtil.isServiceRunning(getActivity(),
 								CoreService.class)) {
 							getActivity().startService(
-									new Intent(getActivity(),
-											CoreService.class));
+									new Intent(getActivity(), CoreService.class));
 						}
 
-						
+
+						startActivity(new Intent(getActivity(),
+								MainActivity.class));
+						getActivity().finish();
 				
 					}
 

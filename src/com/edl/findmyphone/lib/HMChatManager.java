@@ -1,15 +1,5 @@
 package com.edl.findmyphone.lib;
 
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.ListIterator;
-import java.util.Map;
-
-import org.apache.http.Header;
-import org.apache.mina.core.session.IoSession;
-
 import android.content.Context;
 import android.os.Handler;
 import android.telephony.TelephonyManager;
@@ -33,6 +23,16 @@ import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.RequestParams;
 import com.loopj.android.http.TextHttpResponseHandler;
 
+import org.apache.http.Header;
+import org.apache.mina.core.session.IoSession;
+
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.ListIterator;
+import java.util.Map;
+
 
 public class HMChatManager {
 	private static HMChatManager instance;
@@ -46,7 +46,7 @@ public class HMChatManager {
 
 	private OnPushListener pushListener;
 
-	private Map<String, ChatRequest> requests = new LinkedHashMap<String, ChatRequest>();
+	private Map<String, ChatRequest> requests = new LinkedHashMap<>();
 
 	private Thread mainThread;
 	private Handler handler = new Handler();
@@ -118,8 +118,12 @@ public class HMChatManager {
 		params.put("imei", imei);
 		params.put("devicename", devicename);
 
+		Log.i("HMChatManager", "Login is running>>>>>>>>>>");
+
 		return new HttpFuture(client.post(context, url, params,
 				newObjectResponseHandler(callBack)));
+
+
 	}
 
 	/**
@@ -142,6 +146,8 @@ public class HMChatManager {
 		params.put("account", account);
 		params.put("password", password);
 
+		Log.i("HMChatManager", "register is running>>>>>>>>>>>");
+
 		return new HttpFuture(client.post(context, url, params,
 				newObjectResponseHandler(callBack)));
 	}
@@ -158,33 +164,30 @@ public class HMChatManager {
 
 			@SuppressWarnings("unchecked")
 			@Override
-			public void onSuccess(int statusCode, Header[] headers,
-					String responseString) {
+			public void onSuccess(int statusCode, Header[] headers, String responseString) {
 				Log.d("###", "" + responseString);
 
 				if (statusCode == 200) {
 					JsonParser parser = new JsonParser();
-					JsonObject root = parser.parse(responseString)
-							.getAsJsonObject();
+					JsonObject root = parser.parse(responseString).getAsJsonObject();
 					if (root == null) {
 						if (callBack != null) {
 							callBack.onError(HMError.ERROR_SERVER, "服务器异常");
 						}
 					} else {
 						if (callBack != null) {
-							JsonPrimitive flagObj = root
-									.getAsJsonPrimitive("flag");
+							JsonPrimitive flagObj = root.getAsJsonPrimitive("flag");
 							boolean flag = flagObj.getAsBoolean();
 							if (flag) {
-								JsonObject dataObj = root
-										.getAsJsonObject("data");
+								JsonObject dataObj = root.getAsJsonObject("data");
 
 								if (dataObj == null) {
 									callBack.onSuccess(null);
 								} else {
-									Object data = new Gson().fromJson(dataObj,
-											callBack.getClazz());
+									Object data = new Gson().fromJson(dataObj, callBack.getClazz());
 									callBack.onSuccess(data);
+
+									Log.i("register success!", "Get Gson>>>>>>>>");
 								}
 
 							} else {
@@ -251,7 +254,7 @@ public class HMChatManager {
 
 				connector.addRequest(request);//往requestQueue队列添加请求
 
-			};
+			}
 		}.start();
 	}
 

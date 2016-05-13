@@ -12,9 +12,19 @@ public class HMURL {
 	/**
 	 * 登录部分的url地址
 	 */
-	public final static String URL_HTTP_LOGIN = BASE_HTTP + "/login";
-	public final static String URL_HTTP_REGISTER = BASE_HTTP + "/register";
-	public final static String URL_HTTP_LOGOUT = BASE_HTTP + "/logout";
+	public final static String URL_HTTP_LOGIN = BASE_HTTP + "/phone/login.do";
+	/**
+	 * 注册url
+	 */	public final static String URL_HTTP_REGISTER = BASE_HTTP + "/phone/register.do";
+
+	/**
+	 * 经纬度上传
+	 */
+	public final static String URL_HTTP_LOCUPLOAD = BASE_HTTP + "/location/upload.do";
+	/**
+	 * 定位开关
+	 */
+	public final static String URL_HTTP_SWITCH = BASE_HTTP + "/location/switch.do";
 
 
 
