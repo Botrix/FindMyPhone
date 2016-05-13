@@ -1,3 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="C:\Users\edl\Desktop\FindMyPhone\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="7b616ce08ecdb094b6dc8beecbc06c0931c219fd">
+        <dex dex="C:\Users\edl\Desktop\FindMyPhone\build\intermediates\pre-dexed\debug\instant-run-bootstrap_252acacb183fbca9f9cff81b87af43e2a9a94c04.jar" />
+    </item>
+    <item
+        jar="C:\Users\edl\Desktop\FindMyPhone\libs\pinyin4j-2.5.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ae353005f973da1cd8545b54354504c2503f6865">
+        <dex dex="C:\Users\edl\Desktop\FindMyPhone\build\intermediates\pre-dexed\debug\pinyin4j-2.5.0_42e6f4166dfc123b97612c4391eac2cf360341dd.jar" />
+    </item>
+    <item
+        jar="C:\Users\edl\Desktop\FindMyPhone\libs\android-support-v4.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="48c94ae70fa65718b382098237806a5909bb096e">
+        <dex dex="C:\Users\edl\Desktop\FindMyPhone\build\intermediates\pre-dexed\debug\android-support-v4_3646ab46fe4b3b52170dba0fa5a5c04521a07b45.jar" />
+    </item>
+    <item
+        jar="C:\Users\edl\Desktop\FindMyPhone\libs\slf4j-android-1.6.1-RC1.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="fe76e182946faad493a50968f3344e848b467b42">
+        <dex dex="C:\Users\edl\Desktop\FindMyPhone\build\intermediates\pre-dexed\debug\slf4j-android-1.6.1-RC1_4593ec4e0d6f788cf67d94b32233eb4ae97fec6c.jar" />
+    </item>
+    <item
+        jar="C:\Users\edl\Desktop\FindMyPhone\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="d36df0bab5a798a897fc9fd45a011df3466f387f">
+        <dex dex="C:\Users\edl\Desktop\FindMyPhone\build\intermediates\pre-dexed\debug\instant-run_0542fd2d418902ea80e6a635926afe2708a5d371.jar" />
+    </item>
+    <item
+        jar="C:\Users\edl\Desktop\FindMyPhone\libs\gson-2.3.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="5fc52c41ef0239d1093a1eb7c3697036183677ce">
+        <dex dex="C:\Users\edl\Desktop\FindMyPhone\build\intermediates\pre-dexed\debug\gson-2.3_8fd93a89b026d5a2aeb7dade7c17d049cc8c1400.jar" />
+    </item>
+    <item
+        jar="C:\Users\edl\Desktop\FindMyPhone\libs\baidumapapi_v3_5_0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="b63b092a660a70370a05e00be60fd2b4ed290fcb">
+        <dex dex="C:\Users\edl\Desktop\FindMyPhone\build\intermediates\pre-dexed\debug\baidumapapi_v3_5_0_edb82a201636d3987c9fca545d8d8b428509ecc7.jar" />
+    </item>
+    <item
+        jar="C:\Users\edl\Desktop\FindMyPhone\libs\locSDK_6.23.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="6cff92d8446c1ac178a1440b926ff2a937c02b81">
+        <dex dex="C:\Users\edl\Desktop\FindMyPhone\build\intermediates\pre-dexed\debug\locSDK_6.23_2908571e692009ad4bfd6695d95806eaba9b1417.jar" />
+    </item>
+    <item
+        jar="C:\Users\edl\Desktop\FindMyPhone\libs\httpmime-4.2.5.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="412b9914d0adec6d5716df1ada8acbc4f6f2dd37">
+        <dex dex="C:\Users\edl\Desktop\FindMyPhone\build\intermediates\pre-dexed\debug\httpmime-4.2.5_bd49d6780e8e846fc6420bcc84792e936430f849.jar" />
+    </item>
+    <item
+        jar="C:\Users\edl\Desktop\FindMyPhone\libs\mina-core-2.0.7.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="c878e2aa82de748474a624ec3933e4604e446dec">
+        <dex dex="C:\Users\edl\Desktop\FindMyPhone\build\intermediates\pre-dexed\debug\mina-core-2.0.7_6e6fd35391690f741a7e8feac10a5a737dfa64bd.jar" />
+    </item>
+    <item
+        jar="C:\Users\edl\Desktop\FindMyPhone\libs\android-async-http-1.4.6.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="a845a88238be0b5be9d238652c1bc0605ef91f52">
+        <dex dex="C:\Users\edl\Desktop\FindMyPhone\build\intermediates\pre-dexed\debug\android-async-http-1.4.6_167f3c31fe954d7314595815684900dd1cbde1d9.jar" />
+    </item>
+
+</items>

@@ -83,7 +83,8 @@
             </intent-filter>
         </receiver> -->
 
-        <service android:name="com.edl.findmyphone.service.CoreService" >
+        <service
+            android:name="com.edl.findmyphone.service.CoreService" >
         </service>
 
         <service
@@ -95,6 +96,7 @@
                 </action>
             </intent-filter>
         </service>
+
         <!-- <service android:name="com.edl.findmyphone.service.BackgroundService" >
          </service>-->
 

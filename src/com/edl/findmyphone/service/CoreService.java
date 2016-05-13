@@ -29,7 +29,7 @@ public class CoreService extends BaseService implements HMConnectListener,
 
 	private int reconnectCount = 0;// 重连次数
 
-	private Map<String, Action> actionMaps = new HashMap<String, Action>();
+	private Map<String, Action> actionMaps = new HashMap<>();
 
 	private BroadcastReceiver mReceiver = new BroadcastReceiver() {
 
@@ -40,6 +40,7 @@ public class CoreService extends BaseService implements HMConnectListener,
 				if (CommonUtil.isNetConnected(CoreService.this)) {
 					// 网络已经连接
 					connectServer();
+					Log.i("CoreService", ">>>BroadcastReceiver>>>onReceive()----connectServer");
 				}
 			}
 		}

@@ -1,7 +1,6 @@
 package com.edl.findmyphone.fragment;
 
 
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -65,12 +64,8 @@ public class LogoFra extends BaseFragment implements OnClickListener {
 				@Override
 				public void run() {
 					// 开启服务
-					if (!CommonUtil.isServiceRunning(getActivity(),
-							CoreService.class)) {
-						getActivity()
-								.startService(
-										new Intent(getActivity(),
-												CoreService.class));
+					if (!CommonUtil.isServiceRunning(getActivity(), CoreService.class)) {
+						getActivity().startService(new Intent(getActivity(), CoreService.class));
 					}
 
 					startActivity(new Intent(getActivity(), MainActivity.class));

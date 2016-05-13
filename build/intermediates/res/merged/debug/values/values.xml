@@ -3,7 +3,7 @@
     <string-array name="actions">
         <item>action.LocationAction</item>
         <item>action.ClearDataAction</item>
-        <item>action.ShowMessageAction</item>
+        <item>action.RingAction</item>
         <item>action.LockScreenAction</item>
     </string-array>
     <color name="bg_gray">#FFEAEEF2</color>

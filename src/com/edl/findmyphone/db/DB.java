@@ -4,7 +4,7 @@ public interface DB {
 	String NAME = "findmyphone.db";
 	int VERSION = 1;
 
-	public interface Account {
+	interface Account {
 		String TABLE_NAME = "account";
 
 		String COLUMN_ID = "_id";
