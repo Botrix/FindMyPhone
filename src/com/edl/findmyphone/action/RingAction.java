@@ -24,10 +24,7 @@ public class RingAction extends Action {
 
 		String receiver = data.get("receiver").toString();
 		String sender = data.get("sender").toString();
-		
-		
 
-		
        return true;
 
 	}

@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
+import com.edl.findmyphone.action.LocationAction;
 import com.edl.findmyphone.service.LocationService;
 
 public class MainActivity extends Activity {
@@ -73,6 +74,9 @@ public class MainActivity extends Activity {
 			if (null != location && location.getLocType() != BDLocation.TypeServerError) {
 				locationInfo = "手机定位："+location.getLatitude() + "---" + location.getLongitude();
 				System.out.println(locationInfo);
+
+				LocationAction.lat = String.valueOf(location.getLatitude());
+				LocationAction.lng = String.valueOf(location.getLongitude());
 
 			}
 		}

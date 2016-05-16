@@ -2,11 +2,11 @@ package com.edl.findmyphone.lib;
 
 public class HMURL {
 
-	 public static String BASE_HTTP = "http://192.168.1.4:8080/findMyPhone";
+	 public static String BASE_HTTP = "http://192.168.1.4:8088/findMyPhone";
 	 
 	 //mina
 	 public static String BASE_HM_HOST = "192.168.1.4";
-	 public static int BASE_HM_PORT = 9081;
+	 public static int BASE_HM_PORT = 9080;
 
 
 	/**

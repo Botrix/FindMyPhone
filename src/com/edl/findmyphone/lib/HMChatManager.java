@@ -52,9 +52,9 @@ public class HMChatManager {
 	private Handler handler = new Handler();
 	
 	//手机imei唯一标识
-	String imei;
+	public String imei;
 	//手机型号
-    String devicename;
+    public  String devicename;
 	public static HMChatManager getInstance() {
 		if (instance == null) {
 			synchronized (HMChatManager.class) {
@@ -107,12 +107,17 @@ public class HMChatManager {
 	@SuppressWarnings("rawtypes")
 	public HMFuture login(String account, String password,
 			final HMObjectCallBack callBack) {
+		/**
+		 *  AsyncHttpClient
+		 * 该类通常用在android应用程序中创建异步GET, POST, PUT和DELETE HTTP请求，
+		 * 请求参数通过RequestParams实例创建，响应通过重写匿名内部类 ResponseHandlerInterface的方法处理。
+		 */
 		AsyncHttpClient client = new AsyncHttpClient();
 		client.setTimeout(30 * 1000);
 		client.setMaxRetriesAndTimeout(5, 30 * 1000);
 		client.setResponseTimeout(30 * 1000);
 		String url = HMURL.URL_HTTP_LOGIN;
-		RequestParams params = new RequestParams();
+		RequestParams params = new RequestParams();  //采用RequestParams类创建GET/POST参数
 		params.put("account", account);
 		params.put("password", password);
 		params.put("imei", imei);
@@ -152,7 +157,34 @@ public class HMChatManager {
 				newObjectResponseHandler(callBack)));
 	}
 
-	
+	/**
+	 * 上传定位
+	 * @param account
+	 * @param lat
+	 * @param lng
+	 * @param callBack
+     * @return
+     */
+	@SuppressWarnings("rawtypes")
+	public HttpFuture upload(String account, String lat, String lng,
+							 final HMObjectCallBack callBack) {
+
+		AsyncHttpClient client = new AsyncHttpClient();
+		client.setTimeout(30 * 1000);
+		client.setMaxRetriesAndTimeout(5, 30 * 1000);
+		client.setResponseTimeout(30 * 1000);
+		String url = HMURL.URL_HTTP_LOCUPLOAD;
+		RequestParams params = new RequestParams();
+		params.put("account", account);
+
+
+		Log.i("HMChatManager", "upload is running>>>>>>>>>>>");
+
+		return new HttpFuture(client.post(context, url, params,
+				newObjectResponseHandler(callBack)));
+
+	}
+
 
 
 
