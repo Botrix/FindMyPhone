@@ -37,12 +37,12 @@ import java.util.Map;
 public class HMChatManager {
 	private static HMChatManager instance;
 	private Context context;
-	private Map<String, String> headers = new HashMap<String, String>();
+	private Map<String, String> headers = new HashMap<>();
 
 	private String authSequence;
 	private PacketConnector connector;
 
-	private List<HMConnectListener> connectListeners = new LinkedList<HMConnectListener>();
+	private List<HMConnectListener> connectListeners = new LinkedList<>();
 
 	private OnPushListener pushListener;
 
@@ -125,7 +125,7 @@ public class HMChatManager {
 
 		Log.i("HMChatManager", "Login is running>>>>>>>>>>");
 
-		return new HttpFuture(client.post(context, url, params,
+		return new HttpFuture(client.post(context, url, params,   //POST请求，请求结果在回调里获取解析
 				newObjectResponseHandler(callBack)));
 
 
@@ -188,18 +188,18 @@ public class HMChatManager {
 
 
 
-
+	//TextHttpResponseHandler: Used to intercept and handle the responses from requests made using AsyncHttpClient.
 	@SuppressWarnings("rawtypes")
 	private TextHttpResponseHandler newObjectResponseHandler(
 			final HMObjectCallBack callBack) {
-		return new TextHttpResponseHandler("utf-8") {
-
+		return new TextHttpResponseHandler("utf-8") { //Creates new instance with default UTF-8 encoding
+			//Fired when a request returns successfully
 			@SuppressWarnings("unchecked")
 			@Override
 			public void onSuccess(int statusCode, Header[] headers, String responseString) {
 				Log.d("###", "" + responseString);
 
-				if (statusCode == 200) {
+				if (statusCode == 200) { //请求成功处理
 					JsonParser parser = new JsonParser();
 					JsonObject root = parser.parse(responseString).getAsJsonObject();
 					if (root == null) {
