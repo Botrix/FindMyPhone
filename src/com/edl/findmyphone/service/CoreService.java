@@ -40,7 +40,7 @@ public class CoreService extends BaseService implements HMConnectListener,
 				if (CommonUtil.isNetConnected(CoreService.this)) {
 					// 网络已经连接
 					connectServer();
-					Log.i("CoreService", ">>>BroadcastReceiver>>>onReceive()----connectServer");
+					Log.i("CoreService", ">>>BroadcastReceiver>>>onReceive()>>>connectServer()");
 				}
 			}
 		}
@@ -55,7 +55,7 @@ public class CoreService extends BaseService implements HMConnectListener,
 	@Override
 	public void onCreate() {
 		super.onCreate();
-		Log.d("Core", "onCreate");
+		Log.d("CoreService", "executing onCreate()");
 		accountDao = new AccountDao(this);
 		chatManager = HMChatManager.getInstance();
 		chatManager.addConnectionListener(this);

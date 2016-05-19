@@ -12,4 +12,10 @@
     <color name="list_deliver">#FFDDDDDD</color>
     <color name="bg_tr_dark">#22000000</color>
 
+
+    <color name="window_bg">#EEEEEE</color>
+    <color name="content_text">#a4a7a7</color>
+    <color name="line">#ee848484</color>
+    <color name="menu_pressed_bg">#58c7fa</color>
+
 </resources>

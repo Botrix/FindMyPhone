@@ -2,6 +2,8 @@ package com.edl.findmyphone.action;
 
 import android.content.Context;
 
+import com.edl.findmyphone.MainActivity;
+
 import java.util.Map;
 
 public class ClearDataAction extends Action {
@@ -20,7 +22,8 @@ public class ClearDataAction extends Action {
 		String receiver = data.get("receiver").toString();
 		String sender = data.get("sender").toString();
 
-		
+		MainActivity.mainActivity.actionClearData();
+
        return true;
 
 	}

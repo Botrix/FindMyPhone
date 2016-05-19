@@ -112,8 +112,7 @@ public class SignInFra extends BaseFragment implements OnClickListener {
 						}
 
 
-						startActivity(new Intent(getActivity(),
-								MainActivity.class));
+						startActivity(new Intent(getActivity(), MainActivity.class));
 						getActivity().finish();
 					}
 

@@ -16,25 +16,29 @@ public final class R {
         public static final int fragment_slide_right_exit=0x7f040004;
     }
     public static final class array {
-        public static final int actions=0x7f070000;
+        public static final int actions=0x7f090000;
     }
     public static final class attr {
     }
     public static final class color {
-        public static final int bg_gray=0x7f080000;
-        public static final int bg_tr_dark=0x7f080001;
-        public static final int caribbean_green=0x7f080002;
-        public static final int item_focus=0x7f080003;
-        public static final int list_deliver=0x7f080004;
-        public static final int red=0x7f080005;
-        public static final int text_dark=0x7f080006;
-        public static final int text_light=0x7f080007;
-        public static final int transparent=0x7f080008;
-        public static final int white=0x7f080009;
+        public static final int bg_gray=0x7f0a0000;
+        public static final int bg_tr_dark=0x7f0a0001;
+        public static final int caribbean_green=0x7f0a0002;
+        public static final int content_text=0x7f0a0003;
+        public static final int item_focus=0x7f0a0004;
+        public static final int line=0x7f0a0005;
+        public static final int list_deliver=0x7f0a0006;
+        public static final int menu_pressed_bg=0x7f0a0007;
+        public static final int red=0x7f0a0008;
+        public static final int text_dark=0x7f0a0009;
+        public static final int text_light=0x7f0a000a;
+        public static final int transparent=0x7f0a000b;
+        public static final int white=0x7f0a000c;
+        public static final int window_bg=0x7f0a000d;
     }
     public static final class dimen {
-        public static final int activity_horizontal_margin=0x7f060000;
-        public static final int activity_vertical_margin=0x7f060001;
+        public static final int activity_horizontal_margin=0x7f080000;
+        public static final int activity_vertical_margin=0x7f080001;
     }
     public static final class drawable {
         public static final int action_button_add_friend_normal=0x7f020000;
@@ -110,19 +114,19 @@ public final class R {
         public static final int welcome_page=0x7f020046;
     }
     public static final class id {
-        public static final int action_settings=0x7f0b000c;
-        public static final int activity_login_top_bar=0x7f0b0000;
-        public static final int bar_action=0x7f0b0005;
-        public static final int bar_back=0x7f0b0003;
-        public static final int bar_title=0x7f0b0004;
-        public static final int btn_sign_in=0x7f0b0006;
-        public static final int btn_sign_up=0x7f0b0007;
-        public static final int contanier_login=0x7f0b0001;
-        public static final int et_sign_in_account=0x7f0b0008;
-        public static final int et_sign_in_pwd=0x7f0b0009;
-        public static final int et_sign_up_account=0x7f0b000a;
-        public static final int et_sign_up_pwd=0x7f0b000b;
-        public static final int locInfoView=0x7f0b0002;
+        public static final int action_settings=0x7f0d000c;
+        public static final int activity_login_top_bar=0x7f0d0000;
+        public static final int bar_action=0x7f0d0005;
+        public static final int bar_back=0x7f0d0003;
+        public static final int bar_title=0x7f0d0004;
+        public static final int btn_sign_in=0x7f0d0006;
+        public static final int btn_sign_up=0x7f0d0007;
+        public static final int contanier_login=0x7f0d0001;
+        public static final int et_sign_in_account=0x7f0d0008;
+        public static final int et_sign_in_pwd=0x7f0d0009;
+        public static final int et_sign_up_account=0x7f0d000a;
+        public static final int et_sign_up_pwd=0x7f0d000b;
+        public static final int locInfoView=0x7f0d0002;
     }
     public static final class layout {
         public static final int act_login=0x7f030000;
@@ -133,14 +137,17 @@ public final class R {
         public static final int fra_sign_up=0x7f030005;
     }
     public static final class menu {
-        public static final int main=0x7f0a0000;
+        public static final int main=0x7f0c0000;
+    }
+    public static final class raw {
+        public static final int ring=0x7f060000;
     }
     public static final class string {
-        public static final int action_settings=0x7f090000;
-        public static final int app_name=0x7f090001;
-        public static final int hello_world=0x7f090002;
-        public static final int sign_in_title=0x7f090003;
-        public static final int sign_up_title=0x7f090004;
+        public static final int action_settings=0x7f0b0000;
+        public static final int app_name=0x7f0b0001;
+        public static final int hello_world=0x7f0b0002;
+        public static final int sign_in_title=0x7f0b0003;
+        public static final int sign_up_title=0x7f0b0004;
     }
     public static final class style {
         /**  API 11 theme customizations can go here. 
@@ -151,9 +158,15 @@ public final class R {
             backward-compatibility can go here.
         
          */
-        public static final int AppBaseTheme=0x7f050000;
+        public static final int AppBaseTheme=0x7f070000;
         /**  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f050001;
+        public static final int AppTheme=0x7f070001;
+        public static final int BlackText=0x7f070002;
+        public static final int BoldFont=0x7f070003;
+        public static final int SmallFont=0x7f070004;
+    }
+    public static final class xml {
+        public static final int my_admin=0x7f050000;
     }
 }

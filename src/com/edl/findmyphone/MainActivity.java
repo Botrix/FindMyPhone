@@ -1,6 +1,10 @@
 package com.edl.findmyphone;
 
 import android.app.Activity;
+import android.app.admin.DevicePolicyManager;
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Menu;
@@ -10,12 +14,18 @@ import android.widget.TextView;
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
 import com.edl.findmyphone.action.LocationAction;
+import com.edl.findmyphone.receiver.MyAdmin;
 import com.edl.findmyphone.service.LocationService;
 
 public class MainActivity extends Activity {
+	public static MainActivity mainActivity;
 	private LocationService locationService;
 
 	private String locationInfo;
+
+
+	DevicePolicyManager devicePolicyManager;
+	ComponentName adminComponent;
 
 
 	@Override
@@ -23,10 +33,17 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
+		mainActivity = this;
+
+		devicePolicyManager = (DevicePolicyManager) getSystemService(Context.DEVICE_POLICY_SERVICE);
+		adminComponent = new ComponentName(this, MyAdmin.class);
+
 		//----------仅用于测试----------------
 		updateUI();
 
 	}
+
+
 	private void updateUI() {
 		final TextView locaView = (TextView) findViewById(R.id.locInfoView);
 		final Handler handler= new Handler();
@@ -43,6 +60,8 @@ public class MainActivity extends Activity {
 			}
 		});
 	}
+
+
 	/***
 	 * Stop location service
 	 */
@@ -100,5 +119,58 @@ public class MainActivity extends Activity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+
+/*/////////////////////////////////////////////////////////////////
+
+ * 手机找回
+ * 锁屏和清除数据
+
+/////////////////////////////////////////////////////////////////*/
+
+
+	public void actionClearData() {
+		/*// 设备安全管理服务
+		DevicePolicyManager devicePolicyManager = (DevicePolicyManager) getSystemService(Context.DEVICE_POLICY_SERVICE);
+		// 申请权限
+		ComponentName componentName = new ComponentName(this, MyAdmin.class);*/
+		// 判断该组件是否有系统管理员的权限
+		boolean isAdminActive = devicePolicyManager.isAdminActive(adminComponent);
+		if (isAdminActive) {
+			devicePolicyManager.wipeData(DevicePolicyManager.WIPE_EXTERNAL_STORAGE);
+			devicePolicyManager.wipeData(0);  //恢复出厂设置
+
+		} else {
+			activeDeviceManager();
+		}
+	}
+
+	public void actionLockScreen(String password) {
+		/*// 设备安全管理服务
+		DevicePolicyManager devicePolicyManager = (DevicePolicyManager) getSystemService(Context.DEVICE_POLICY_SERVICE);
+		// 申请权限
+		ComponentName componentName = new ComponentName(this, MyAdmin.class);
+		// 判断该组件是否有系统管理员的权限*/
+		boolean isAdminActive = devicePolicyManager.isAdminActive(adminComponent);
+		if (isAdminActive) {
+			devicePolicyManager.lockNow(); //锁屏
+			devicePolicyManager.resetPassword(password, 0); //设置锁屏密码
+		} else {
+			activeDeviceManager();
+			devicePolicyManager.lockNow();
+			devicePolicyManager.resetPassword(password, 0);
+		}
+	}
+
+	private void activeDeviceManager() {
+		//使用隐式意图调用系统方法来激活指定的设备管理器
+		Intent intent = new Intent(DevicePolicyManager.ACTION_ADD_DEVICE_ADMIN);
+		// 指定动作名称
+		//intent.setAction(DevicePolicyManager.ACTION_ADD_DEVICE_ADMIN);
+		//intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+		// 指定给哪个组件授权
+		intent.putExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN, adminComponent);
+		//intent.putExtra(DevicePolicyManager.EXTRA_ADD_EXPLANATION, "开启后可锁屏");
+		startActivity(intent);
 	}
 }

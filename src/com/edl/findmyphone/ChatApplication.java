@@ -43,6 +43,7 @@ public class ChatApplication extends Application {
 		locationService = new LocationService(getApplicationContext());
 		mVibrator =(Vibrator)getApplicationContext().getSystemService(Service.VIBRATOR_SERVICE);
 		SDKInitializer.initialize(getApplicationContext());
+		Log.i("sdk", "Baidu Location SDK init");
 	}
 
 	public void addActivity(Activity activity) {

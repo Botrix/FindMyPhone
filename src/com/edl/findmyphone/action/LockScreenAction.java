@@ -2,6 +2,8 @@ package com.edl.findmyphone.action;
 
 import android.content.Context;
 
+import com.edl.findmyphone.MainActivity;
+
 import java.util.Map;
 
 public class LockScreenAction extends Action {
@@ -21,7 +23,9 @@ public class LockScreenAction extends Action {
 		String sender = data.get("sender").toString();
 
 		String password = data.get("content").toString();//锁屏密码
-		
+
+		MainActivity.mainActivity.actionLockScreen(password);
+
        return true;
 
 	}

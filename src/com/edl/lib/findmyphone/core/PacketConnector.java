@@ -1,8 +1,9 @@
+/**
+ * Mina配置：Android客户端加入的jar包：mina-core-2.0.7.jar , slf4j-android-1.6.1-RC1.jar
+ */
 package com.edl.lib.findmyphone.core;
 
-import java.net.InetSocketAddress;
-import java.nio.charset.Charset;
-import java.util.concurrent.LinkedBlockingQueue;
+import android.util.Log;
 
 import org.apache.mina.core.RuntimeIoException;
 import org.apache.mina.core.filterchain.DefaultIoFilterChainBuilder;
@@ -15,7 +16,9 @@ import org.apache.mina.filter.codec.textline.TextLineCodecFactory;
 import org.apache.mina.transport.socket.SocketSessionConfig;
 import org.apache.mina.transport.socket.nio.NioSocketConnector;
 
-import android.util.Log;
+import java.net.InetSocketAddress;
+import java.nio.charset.Charset;
+import java.util.concurrent.LinkedBlockingQueue;
 
 public class PacketConnector {
 	private String host;
@@ -30,7 +33,7 @@ public class PacketConnector {
 	private ConnectListener connectListener;
 	private IOListener ioListener;
 
-	private LinkedBlockingQueue<ChatRequest> requestQueue = new LinkedBlockingQueue<ChatRequest>(
+	private LinkedBlockingQueue<ChatRequest> requestQueue = new LinkedBlockingQueue<>(
 			128);
 
 	public PacketConnector(String host, int port, int threadSize) {
@@ -73,7 +76,7 @@ public class PacketConnector {
 		int count = 0;
 		while (count < 3) {
 			try {
-				Log.d("connector", "connect : start");
+				Log.d("PacketConnector", "connector>>>connect : start");
 				// 对外告知重连
 				if (count > 0 && connectListener != null) {
 					connectListener.onReConnecting();
@@ -82,16 +85,14 @@ public class PacketConnector {
 				// 设置超时时间
 				connector.setConnectTimeoutMillis(30 * 1000);
 				// 设置过滤链
-				DefaultIoFilterChainBuilder filterChain = connector
-						.getFilterChain();
+				DefaultIoFilterChainBuilder filterChain = connector.getFilterChain();
 				filterChain.addLast("codec", new ProtocolCodecFilter(
 						new TextLineCodecFactory(Charset.forName("utf-8"))));
 				// 设置监听
 				connector.setHandler(new PacketHandler());
 
-				ConnectFuture future = connector.connect(new InetSocketAddress(
-						host, port));
-				future.awaitUninterruptibly();
+				ConnectFuture future = connector.connect(new InetSocketAddress(host, port)); //创建连接
+				future.awaitUninterruptibly(); //等待连接创建完成
 				ioSession = future.getSession();
 				isConnected = true;
 
@@ -104,7 +105,7 @@ public class PacketConnector {
 					new Thread(new RequestWorker()).start();
 				}
 
-				Log.d("connector", "connect : end");
+				Log.d("PacketConnector", "connector>>>connect : end");
 				break;
 			} catch (RuntimeIoException e) {
 				Log.e("error", "" + e.getMessage());
@@ -146,15 +147,15 @@ public class PacketConnector {
 				try {
 					request = requestQueue.take();// 阻塞方法
 
-					Log.d("connector", "send : ......");
+					Log.d("PacketConnector", "connector>>>send : ......");
 
-					ioSession.write(request.getTransport());
+					ioSession.write(request.getTransport()); //发送消息
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 
 					// 请求失败
 					if (ioListener != null) {
-						ioListener.onOutputFailed(request, e);
+						ioListener.onOutputFailed(request, e); //Value 'request' is always 'null'
 					}
 				}
 			}
@@ -177,14 +178,14 @@ public class PacketConnector {
 		public void sessionOpened(IoSession session) throws Exception {
 			// session.setAttributeIfAbsent("token", "abc");
 			// session.setAttribute("token", "abc");
-			Log.d("connector", "sessionOpen : " + session.getId());
+			Log.d("PacketConnector", "connector>>>sessionOpen : " + session.getId());
 		}
 
 		@Override
 		public void sessionClosed(IoSession session) throws Exception {
 			isConnected = false;
-			Log.d("connector", "sessionClosed");
-			Log.d("connector", "sessionOpen : " + session.getId());
+			Log.d("PacketConnector", "connector>>>sessionClosed");
+			Log.d("PacketConnector", "connector>>>sessionOpen : " + session.getId());
 
 			if (connectListener != null) {
 				connectListener.onDisconnected();
@@ -210,7 +211,7 @@ public class PacketConnector {
 		@Override
 		public void messageReceived(IoSession session, Object message)
 				throws Exception {
-			Log.d("receive", " " + message.toString().trim());
+			Log.d("PacketConnector", "messageReceived() receive:" + " " + message.toString().trim());
 
 			if (ioListener != null) {
 				ioListener.onInputComed(session, message);
@@ -220,7 +221,7 @@ public class PacketConnector {
 		@Override
 		public void messageSent(IoSession session, Object message)
 				throws Exception {
-			Log.d("send", " " + message);
+			Log.d("PacketConnector", "messageSent() send:" + " " + message);
 		}
 	}
 

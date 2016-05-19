@@ -30,9 +30,8 @@ public class LocationAction extends Action {
 			return false;
 		}
 
-/*		String receiver = data.get("receiver").toString();
-		String sender = data.get("sender").toString();*/
-
+		/*String receiver = data.get("receiver").toString();
+		String sender = data.get("sender").toString(); */
 		AccountDao dao = new AccountDao(context);
 		final Account account = dao.getCurrentAccount();
 

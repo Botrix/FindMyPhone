@@ -427,7 +427,7 @@ public class HMChatManager {
 							session.write("{type:'response',sequence:'"
 									+ sequence + "',flag:" + true + "}");
 							
-						} else {////处理失败，返回返回服务器
+						} else {//处理失败，返回返回服务器
 							
 							session.write("{type:'response',sequence:'"
 									+ sequence + "',flag:" + false

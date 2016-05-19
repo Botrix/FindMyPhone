@@ -91,6 +91,25 @@
                 "from": {
                     "file": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\values\\colors.xml",
                     "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 562,
+                        "endColumn": 46,
+                        "endOffset": 604
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 468,
+                    "endColumn": 46,
+                    "endOffset": 510
+                },
+                "from": {
+                    "file": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\values\\colors.xml",
+                    "position": {
                         "startLine": 10,
                         "startColumn": 4,
                         "startOffset": 373,
@@ -101,11 +120,30 @@
             },
             {
                 "to": {
-                    "startLine": 12,
+                    "startLine": 13,
                     "startColumn": 4,
-                    "startOffset": 468,
+                    "startOffset": 515,
+                    "endColumn": 40,
+                    "endOffset": 551
+                },
+                "from": {
+                    "file": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\values\\colors.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 609,
+                        "endColumn": 40,
+                        "endOffset": 645
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 556,
                     "endColumn": 48,
-                    "endOffset": 512
+                    "endOffset": 600
                 },
                 "from": {
                     "file": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\values\\colors.xml",
@@ -120,11 +158,30 @@
             },
             {
                 "to": {
-                    "startLine": 13,
+                    "startLine": 15,
                     "startColumn": 4,
-                    "startOffset": 517,
+                    "startOffset": 605,
+                    "endColumn": 49,
+                    "endOffset": 650
+                },
+                "from": {
+                    "file": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\values\\colors.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 650,
+                        "endColumn": 49,
+                        "endOffset": 695
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 655,
                     "endColumn": 39,
-                    "endOffset": 552
+                    "endOffset": 690
                 },
                 "from": {
                     "file": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\values\\colors.xml",
@@ -139,11 +196,11 @@
             },
             {
                 "to": {
-                    "startLine": 14,
+                    "startLine": 17,
                     "startColumn": 4,
-                    "startOffset": 557,
+                    "startOffset": 695,
                     "endColumn": 45,
-                    "endOffset": 598
+                    "endOffset": 736
                 },
                 "from": {
                     "file": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\values\\colors.xml",
@@ -158,11 +215,11 @@
             },
             {
                 "to": {
-                    "startLine": 15,
+                    "startLine": 18,
                     "startColumn": 4,
-                    "startOffset": 603,
+                    "startOffset": 741,
                     "endColumn": 46,
-                    "endOffset": 645
+                    "endOffset": 783
                 },
                 "from": {
                     "file": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\values\\colors.xml",
@@ -177,11 +234,11 @@
             },
             {
                 "to": {
-                    "startLine": 16,
+                    "startLine": 19,
                     "startColumn": 4,
-                    "startOffset": 650,
+                    "startOffset": 788,
                     "endColumn": 47,
-                    "endOffset": 693
+                    "endOffset": 831
                 },
                 "from": {
                     "file": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\values\\colors.xml",
@@ -196,11 +253,11 @@
             },
             {
                 "to": {
-                    "startLine": 17,
+                    "startLine": 20,
                     "startColumn": 4,
-                    "startOffset": 698,
+                    "startOffset": 836,
                     "endColumn": 41,
-                    "endOffset": 735
+                    "endOffset": 873
                 },
                 "from": {
                     "file": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\values\\colors.xml",
@@ -215,11 +272,30 @@
             },
             {
                 "to": {
-                    "startLine": 18,
+                    "startLine": 21,
                     "startColumn": 4,
-                    "startOffset": 740,
+                    "startOffset": 878,
+                    "endColumn": 43,
+                    "endOffset": 917
+                },
+                "from": {
+                    "file": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\values\\colors.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 518,
+                        "endColumn": 43,
+                        "endOffset": 557
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 922,
                     "endColumn": 57,
-                    "endOffset": 793
+                    "endOffset": 975
                 },
                 "from": {
                     "file": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\values\\dimens.xml",
@@ -234,11 +310,11 @@
             },
             {
                 "to": {
-                    "startLine": 19,
+                    "startLine": 23,
                     "startColumn": 4,
-                    "startOffset": 798,
+                    "startOffset": 980,
                     "endColumn": 55,
-                    "endOffset": 849
+                    "endOffset": 1031
                 },
                 "from": {
                     "file": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\values\\dimens.xml",
@@ -253,11 +329,11 @@
             },
             {
                 "to": {
-                    "startLine": 20,
+                    "startLine": 24,
                     "startColumn": 4,
-                    "startOffset": 854,
+                    "startOffset": 1036,
                     "endColumn": 52,
-                    "endOffset": 902
+                    "endOffset": 1084
                 },
                 "from": {
                     "file": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\values\\strings.xml",
@@ -272,11 +348,11 @@
             },
             {
                 "to": {
-                    "startLine": 21,
+                    "startLine": 25,
                     "startColumn": 4,
-                    "startOffset": 907,
+                    "startOffset": 1089,
                     "endColumn": 48,
-                    "endOffset": 951
+                    "endOffset": 1133
                 },
                 "from": {
                     "file": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\values\\strings.xml",
@@ -291,11 +367,11 @@
             },
             {
                 "to": {
-                    "startLine": 22,
+                    "startLine": 26,
                     "startColumn": 4,
-                    "startOffset": 956,
+                    "startOffset": 1138,
                     "endColumn": 52,
-                    "endOffset": 1004
+                    "endOffset": 1186
                 },
                 "from": {
                     "file": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\values\\strings.xml",
@@ -310,11 +386,11 @@
             },
             {
                 "to": {
-                    "startLine": 23,
+                    "startLine": 27,
                     "startColumn": 4,
-                    "startOffset": 1009,
+                    "startOffset": 1191,
                     "endColumn": 44,
-                    "endOffset": 1049
+                    "endOffset": 1231
                 },
                 "from": {
                     "file": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\values\\strings.xml",
@@ -329,11 +405,11 @@
             },
             {
                 "to": {
-                    "startLine": 24,
+                    "startLine": 28,
                     "startColumn": 4,
-                    "startOffset": 1054,
+                    "startOffset": 1236,
                     "endColumn": 44,
-                    "endOffset": 1094
+                    "endOffset": 1276
                 },
                 "from": {
                     "file": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\values\\strings.xml",
@@ -348,12 +424,12 @@
             },
             {
                 "to": {
-                    "startLine": 25,
+                    "startLine": 29,
                     "startColumn": 4,
-                    "startOffset": 1099,
-                    "endLine": 31,
+                    "startOffset": 1281,
+                    "endLine": 35,
                     "endColumn": 12,
-                    "endOffset": 1403
+                    "endOffset": 1585
                 },
                 "from": {
                     "file": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\values\\styles.xml",
@@ -369,12 +445,12 @@
             },
             {
                 "to": {
-                    "startLine": 32,
+                    "startLine": 36,
                     "startColumn": 4,
-                    "startOffset": 1408,
-                    "endLine": 34,
+                    "startOffset": 1590,
+                    "endLine": 38,
                     "endColumn": 12,
-                    "endOffset": 1563
+                    "endOffset": 1745
                 },
                 "from": {
                     "file": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\values\\styles.xml",
@@ -385,6 +461,69 @@
                         "endLine": 17,
                         "endColumn": 12,
                         "endOffset": 700
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 39,
+                    "startColumn": 4,
+                    "startOffset": 1750,
+                    "endLine": 42,
+                    "endColumn": 12,
+                    "endOffset": 1903
+                },
+                "from": {
+                    "file": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 710,
+                        "endLine": 23,
+                        "endColumn": 12,
+                        "endOffset": 866
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 43,
+                    "startColumn": 4,
+                    "startOffset": 1908,
+                    "endLine": 49,
+                    "endColumn": 12,
+                    "endOffset": 2237
+                },
+                "from": {
+                    "file": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 26,
+                        "startColumn": 4,
+                        "startOffset": 889,
+                        "endLine": 32,
+                        "endColumn": 12,
+                        "endOffset": 1224
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 50,
+                    "startColumn": 4,
+                    "startOffset": 2242,
+                    "endLine": 55,
+                    "endColumn": 12,
+                    "endOffset": 2510
+                },
+                "from": {
+                    "file": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 34,
+                        "startColumn": 4,
+                        "startOffset": 1232,
+                        "endLine": 39,
+                        "endColumn": 12,
+                        "endOffset": 1505
                     }
                 }
             }
