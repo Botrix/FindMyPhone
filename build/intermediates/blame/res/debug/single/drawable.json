@@ -8,12 +8,20 @@
         "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\drawable\\login_shape_input_focus.xml"
     },
     {
+        "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\drawable\\toggle_off.png",
+        "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\drawable\\toggle_off.png"
+    },
+    {
         "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_item_selector.xml",
         "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\drawable\\btn_item_selector.xml"
     },
     {
         "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_green_selector.xml",
         "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\drawable\\btn_green_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\drawable\\toggle_on.png",
+        "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\drawable\\toggle_on.png"
     },
     {
         "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\drawable\\loading_circle.xml",
@@ -36,12 +44,24 @@
         "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\drawable\\btn_add_friend_selector.xml"
     },
     {
+        "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\drawable\\option_item.xml",
+        "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\drawable\\option_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_arrow.png",
+        "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\drawable\\ic_arrow.png"
+    },
+    {
         "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_send_selector.xml",
         "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\drawable\\btn_send_selector.xml"
     },
     {
         "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_back_selector.xml",
         "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\drawable\\btn_back_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\drawable\\location.jpg",
+        "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\drawable\\location.jpg"
     },
     {
         "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\drawable\\login_selector_input.xml",
@@ -58,6 +78,10 @@
     {
         "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_warning_selector.xml",
         "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\drawable\\btn_warning_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\drawable\\toggle_selector.xml",
+        "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\drawable\\toggle_selector.xml"
     },
     {
         "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\drawable\\rect_loading.xml",

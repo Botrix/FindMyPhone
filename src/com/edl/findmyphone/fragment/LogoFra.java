@@ -53,10 +53,10 @@ public class LogoFra extends BaseFragment implements OnClickListener {
 		btnSignIn = (Button) view.findViewById(R.id.btn_sign_in);
 		btnSignUp = (Button) view.findViewById(R.id.btn_sign_up);
 
-		if (currentFlag == ARG_TYPE_FIRST) {
+		if (currentFlag == ARG_TYPE_FIRST) { //首次登录
 			btnSignIn.setVisibility(View.VISIBLE);
 			btnSignUp.setVisibility(View.VISIBLE);
-		} else {
+		} else { //已登录
 			btnSignIn.setVisibility(View.GONE);
 			btnSignUp.setVisibility(View.GONE);
 

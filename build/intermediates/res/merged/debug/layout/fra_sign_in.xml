@@ -39,10 +39,11 @@
         android:drawablePadding="15dp"
         android:drawableStart="@drawable/user_pwd_lock_icon"
         android:hint="请输入密码"
+        android:inputType="textPassword"
         android:minHeight="40dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:singleLine="true" />
+        android:singleLine="true"/>
 
     <Button
         android:id="@+id/btn_sign_in"

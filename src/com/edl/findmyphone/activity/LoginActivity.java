@@ -100,7 +100,6 @@ public class LoginActivity extends BaseActivity implements OnClickListener {
 			fragment = new SignInFra();
 		}
 
-		// 设置头
 		mTopBar.setVisibility(View.VISIBLE);
 		mTopBar.setTitle(R.string.sign_in_title);
 		mTopBar.setBackVisibility(true);

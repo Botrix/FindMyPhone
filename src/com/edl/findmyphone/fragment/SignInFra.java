@@ -95,8 +95,7 @@ public class SignInFra extends BaseFragment implements OnClickListener {
 						AccountDao dao = new AccountDao(getActivity());
 						account.setCurrent(true);
 
-						Account localAccount = dao.getByAccount(account
-								.getAccount());
+						Account localAccount = dao.getByAccount(account.getAccount());
 
 
 						if (localAccount != null) {

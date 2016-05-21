@@ -1,27 +1,36 @@
 package com.edl.findmyphone;
 
-import android.app.Activity;
 import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
 
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
 import com.edl.findmyphone.action.LocationAction;
+import com.edl.findmyphone.base.BaseActivity;
+import com.edl.findmyphone.fragment.FindFra;
+import com.edl.findmyphone.fragment.MainFra;
+import com.edl.findmyphone.fragment.SettingsFra;
 import com.edl.findmyphone.receiver.MyAdmin;
 import com.edl.findmyphone.service.LocationService;
+import com.edl.findmyphone.widget.NormalTopBar;
 
-public class MainActivity extends Activity {
+public class MainActivity extends BaseActivity {
 	public static MainActivity mainActivity;
 	private LocationService locationService;
 
 	private String locationInfo;
+	NormalTopBar mTopBar;
+
+	FragmentManager fm;
+	FindFra findFra;
+	SettingsFra settingsFra;
 
 
 	DevicePolicyManager devicePolicyManager;
@@ -31,18 +40,31 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.frag_container);
 
 		mainActivity = this;
+
+		/*mTopBar = (NormalTopBar) findViewById(R.id.topbar);
+		mTopBar.setVisibility(View.VISIBLE);
+		mTopBar.setTitle("手机找回");
+		mTopBar.setBackVisibility(false);*/
 
 		devicePolicyManager = (DevicePolicyManager) getSystemService(Context.DEVICE_POLICY_SERVICE);
 		adminComponent = new ComponentName(this, MyAdmin.class);
 
-		//----------仅用于测试----------------
-		updateUI();
+		/*//----------仅用于测试----------------
+		updateUI();*/
 
+
+		MainFra mainFra = new MainFra();
+
+		fm = getSupportFragmentManager();
+		FragmentTransaction transaction = fm.beginTransaction();
+		transaction.replace(R.id.container_fra, mainFra);
+		transaction.commit();
 	}
 
+/*
 
 	private void updateUI() {
 		final TextView locaView = (TextView) findViewById(R.id.locInfoView);
@@ -60,6 +82,7 @@ public class MainActivity extends Activity {
 			}
 		});
 	}
+*/
 
 
 	/***
@@ -119,6 +142,27 @@ public class MainActivity extends Activity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+
+
+	public void onStartSettingsFra() {
+		if (settingsFra == null) {
+			settingsFra = new SettingsFra();
+		}
+		FragmentTransaction transaction = fm.beginTransaction();
+		transaction.replace(R.id.container_fra, settingsFra);
+		transaction.addToBackStack(null);
+		transaction.commit();
+	}
+
+	public void onStartFindFra() {
+		if (findFra == null) {
+			findFra = new FindFra();
+		}
+		FragmentTransaction transaction = fm.beginTransaction();
+		transaction.replace(R.id.container_fra, findFra);
+		transaction.addToBackStack(null);
+		transaction.commit();
 	}
 
 /*/////////////////////////////////////////////////////////////////
