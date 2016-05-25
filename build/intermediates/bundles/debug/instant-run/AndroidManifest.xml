@@ -67,18 +67,16 @@
             </intent-filter>
         </activity>
 
-        <!--
-             <receiver android:name=".receiver.BootCompletedReceiver" >
+        <receiver android:name="com.edl.findmyphone.receiver.BootCompletedReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
-        <receiver android:name=".receiver.ConnectedReceiver" >
+        <receiver android:name="com.edl.findmyphone.receiver.ConnectedReceiver" >
             <intent-filter>
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
             </intent-filter>
         </receiver>
-        -->
 
         <service android:name="com.edl.findmyphone.service.CoreService" >
         </service>

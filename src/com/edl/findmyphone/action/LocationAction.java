@@ -19,6 +19,7 @@ public class LocationAction extends Action {
 	public static String lat;
 	public static String lng;
 
+
 	@Override
 	public String getAction() {
 		return "location";
@@ -29,6 +30,9 @@ public class LocationAction extends Action {
 		if (data == null) {
 			return false;
 		}
+
+
+
 
 		/*String receiver = data.get("receiver").toString();
 		String sender = data.get("sender").toString(); */

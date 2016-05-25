@@ -5,7 +5,7 @@
         jar="C:\Users\edl\Desktop\FindMyPhone\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="11453f31c312f79ff4770e3d972ed2aa2d210a27">
+        sha1="9730633ae328cd8333686de13250309982e10a69">
         <dex dex="C:\Users\edl\Desktop\FindMyPhone\build\intermediates\pre-dexed\debug\instant-run-bootstrap_252acacb183fbca9f9cff81b87af43e2a9a94c04.jar" />
     </item>
     <item
@@ -19,7 +19,7 @@
         jar="C:\Users\edl\Desktop\FindMyPhone\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="10a0aa7649035acbc859e3ebc60bbfe2b5760adc">
+        sha1="19147cec229ceadf293a647da6b27a79b5368ccd">
         <dex dex="C:\Users\edl\Desktop\FindMyPhone\build\intermediates\pre-dexed\debug\instant-run_0542fd2d418902ea80e6a635926afe2708a5d371.jar" />
     </item>
     <item
@@ -44,18 +44,18 @@
         <dex dex="C:\Users\edl\Desktop\FindMyPhone\build\intermediates\pre-dexed\debug\xUtils-2.6.14_a87ff37fa6a7492e8e5140b505b94dabe94f9903.jar" />
     </item>
     <item
-        jar="C:\Users\edl\Desktop\FindMyPhone\libs\locSDK_6.23.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="6cff92d8446c1ac178a1440b926ff2a937c02b81">
-        <dex dex="C:\Users\edl\Desktop\FindMyPhone\build\intermediates\pre-dexed\debug\locSDK_6.23_2908571e692009ad4bfd6695d95806eaba9b1417.jar" />
-    </item>
-    <item
         jar="C:\Users\edl\Desktop\FindMyPhone\libs\httpmime-4.2.5.jar"
         jumboMode="true"
         revision="23.0.3"
         sha1="412b9914d0adec6d5716df1ada8acbc4f6f2dd37">
         <dex dex="C:\Users\edl\Desktop\FindMyPhone\build\intermediates\pre-dexed\debug\httpmime-4.2.5_bd49d6780e8e846fc6420bcc84792e936430f849.jar" />
+    </item>
+    <item
+        jar="C:\Users\edl\Desktop\FindMyPhone\libs\locSDK_6.23.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="6cff92d8446c1ac178a1440b926ff2a937c02b81">
+        <dex dex="C:\Users\edl\Desktop\FindMyPhone\build\intermediates\pre-dexed\debug\locSDK_6.23_2908571e692009ad4bfd6695d95806eaba9b1417.jar" />
     </item>
     <item
         jar="C:\Users\edl\Desktop\FindMyPhone\libs\android-async-http-1.4.6.jar"

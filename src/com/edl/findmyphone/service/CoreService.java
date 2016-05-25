@@ -1,11 +1,14 @@
 package com.edl.findmyphone.service;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.net.ConnectivityManager;
 import android.os.IBinder;
+import android.os.SystemClock;
 import android.util.Log;
 
 import com.edl.findmyphone.R;
@@ -21,8 +24,7 @@ import com.edl.findmyphone.uitls.CommonUtil;
 import java.util.HashMap;
 import java.util.Map;
 
-public class CoreService extends BaseService implements HMConnectListener,
-		OnPushListener {
+public class CoreService extends BaseService implements HMConnectListener, OnPushListener {
 	
 	private HMChatManager chatManager;
 	private AccountDao accountDao;
@@ -80,6 +82,35 @@ public class CoreService extends BaseService implements HMConnectListener,
 		// 断开连接
 		chatManager.closeSocket();
 	}
+
+	@Override
+	public void onTaskRemoved(Intent rootIntent) {
+		Intent restartServiceIntent = new Intent(getApplicationContext(), this.getClass());
+		restartServiceIntent.setPackage(getPackageName());
+
+		PendingIntent restartServicePendingIntent = PendingIntent
+				.getService(getApplicationContext(), 1, restartServiceIntent, PendingIntent.FLAG_ONE_SHOT);
+		AlarmManager alarmService = (AlarmManager) getApplicationContext()
+				.getSystemService(Context.ALARM_SERVICE);
+		alarmService.set(
+				AlarmManager.ELAPSED_REALTIME,
+				SystemClock.elapsedRealtime() + 1000,
+				restartServicePendingIntent);
+
+		Log.i("CoreService", "onTaskRemoved-->restart CoreService");
+		super.onTaskRemoved(rootIntent);
+	}
+
+
+/*
+	@Override
+	public void onTaskRemoved(Intent rootIntent) {
+		Intent intent = new Intent(this, TargetActivity.class);
+		intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+		startActivity(intent);
+	}
+*/
+
 
 	private void connectServer() {
 		Account account = accountDao.getCurrentAccount();

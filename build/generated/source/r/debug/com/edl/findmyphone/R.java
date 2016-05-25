@@ -125,14 +125,14 @@ public final class R {
         public static final int bar_action=0x7f0d0010;
         public static final int bar_back=0x7f0d000e;
         public static final int bar_title=0x7f0d000f;
-        public static final int btn_sign_in=0x7f0d0011;
-        public static final int btn_sign_up=0x7f0d0012;
-        public static final int container_fra=0x7f0d0017;
+        public static final int btn_sign_in=0x7f0d0012;
+        public static final int btn_sign_up=0x7f0d0013;
+        public static final int container_fra=0x7f0d0011;
         public static final int contanier_login=0x7f0d0001;
-        public static final int et_sign_in_account=0x7f0d0013;
-        public static final int et_sign_in_pwd=0x7f0d0014;
-        public static final int et_sign_up_account=0x7f0d0015;
-        public static final int et_sign_up_pwd=0x7f0d0016;
+        public static final int et_sign_in_account=0x7f0d0014;
+        public static final int et_sign_in_pwd=0x7f0d0015;
+        public static final int et_sign_up_account=0x7f0d0016;
+        public static final int et_sign_up_pwd=0x7f0d0017;
         public static final int imageView=0x7f0d0004;
         public static final int rl_find=0x7f0d0006;
         public static final int rl_mayfind=0x7f0d0007;
@@ -150,13 +150,13 @@ public final class R {
         public static final int act_login=0x7f030000;
         public static final int activity_main=0x7f030001;
         public static final int bar_normal=0x7f030002;
-        public static final int fra_logo=0x7f030003;
-        public static final int fra_main=0x7f030004;
-        public static final int fra_sign_in=0x7f030005;
-        public static final int fra_sign_up=0x7f030006;
-        public static final int frag_container=0x7f030007;
-        public static final int fragment_find=0x7f030008;
-        public static final int fragment_settings=0x7f030009;
+        public static final int fra_container=0x7f030003;
+        public static final int fra_find=0x7f030004;
+        public static final int fra_logo=0x7f030005;
+        public static final int fra_main=0x7f030006;
+        public static final int fra_settings=0x7f030007;
+        public static final int fra_sign_in=0x7f030008;
+        public static final int fra_sign_up=0x7f030009;
     }
     public static final class menu {
         public static final int main=0x7f0c0000;

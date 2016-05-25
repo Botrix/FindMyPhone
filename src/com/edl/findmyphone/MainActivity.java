@@ -23,7 +23,7 @@ import com.edl.findmyphone.widget.NormalTopBar;
 
 public class MainActivity extends BaseActivity {
 	public static MainActivity mainActivity;
-	private LocationService locationService;
+	public LocationService locationService;
 
 	private String locationInfo;
 	NormalTopBar mTopBar;
@@ -40,7 +40,7 @@ public class MainActivity extends BaseActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.frag_container);
+		setContentView(R.layout.fra_container);
 
 		mainActivity = this;
 
@@ -95,7 +95,6 @@ public class MainActivity extends BaseActivity {
 		locationService.stop(); //停止定位服务
 		super.onStop();
 	}
-
 	@Override
 	protected void onStart() {
 		super.onStart();
@@ -105,7 +104,6 @@ public class MainActivity extends BaseActivity {
 		locationService.registerListener(mListener);
 		locationService.start();
 	}
-
 	/*****
 	 *定位结果回调，重写onReceiveLocation方法，可以直接拷贝如下代码到自己工程中修改
 	 */
@@ -165,7 +163,7 @@ public class MainActivity extends BaseActivity {
 		transaction.commit();
 	}
 
-/*/////////////////////////////////////////////////////////////////
+/*****************************************************************
 
  * 手机找回
  * 锁屏和清除数据
@@ -216,5 +214,6 @@ public class MainActivity extends BaseActivity {
 		intent.putExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN, adminComponent);
 		//intent.putExtra(DevicePolicyManager.EXTRA_ADD_EXPLANATION, "开启后可锁屏");
 		startActivity(intent);
+
 	}
 }
