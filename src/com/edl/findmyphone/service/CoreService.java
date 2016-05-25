@@ -1,6 +1,7 @@
 package com.edl.findmyphone.service;
 
 import android.app.AlarmManager;
+import android.app.Notification;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -72,6 +73,22 @@ public class CoreService extends BaseService implements HMConnectListener, OnPus
 	}
 
 	@Override
+	public int onStartCommand(Intent intent, int flags, int startId) {
+		//Make this service run in the foreground
+		Notification notification = new Notification();
+		notification.flags = Notification.FLAG_ONGOING_EVENT;
+		notification.flags |= Notification.FLAG_NO_CLEAR;
+		notification.flags |= Notification.FLAG_FOREGROUND_SERVICE;
+		startForeground(0, notification);
+
+		Account account = accountDao.getCurrentAccount();
+		if (account != null) {
+			chatManager.auth(account.getAccount(), account.getToken());
+		}
+		return START_STICKY;
+	}
+
+	@Override
 	public void onDestroy() {
 		super.onDestroy();
 		Log.d("Core", "onDestroy");
@@ -85,6 +102,7 @@ public class CoreService extends BaseService implements HMConnectListener, OnPus
 
 	@Override
 	public void onTaskRemoved(Intent rootIntent) {
+		Log.i("CoreService", "onTaskRemoved >>>>>>>>" + this.getClass());
 		Intent restartServiceIntent = new Intent(getApplicationContext(), this.getClass());
 		restartServiceIntent.setPackage(getPackageName());
 
@@ -94,11 +112,11 @@ public class CoreService extends BaseService implements HMConnectListener, OnPus
 				.getSystemService(Context.ALARM_SERVICE);
 		alarmService.set(
 				AlarmManager.ELAPSED_REALTIME,
-				SystemClock.elapsedRealtime() + 1000,
+				SystemClock.elapsedRealtime() + 2000,
 				restartServicePendingIntent);
 
-		Log.i("CoreService", "onTaskRemoved-->restart CoreService");
-		super.onTaskRemoved(rootIntent);
+		Log.i("CoreService", "onTaskRemoved-->restart CoreService" + this.getClass());
+		//super.onTaskRemoved(rootIntent);
 	}
 
 
