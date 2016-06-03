@@ -10,9 +10,6 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.baidu.location.BDLocation;
-import com.baidu.location.BDLocationListener;
-import com.edl.findmyphone.action.LocationAction;
 import com.edl.findmyphone.base.BaseActivity;
 import com.edl.findmyphone.fragment.FindFra;
 import com.edl.findmyphone.fragment.MainFra;
@@ -23,7 +20,7 @@ import com.edl.findmyphone.widget.NormalTopBar;
 
 public class MainActivity extends BaseActivity {
 	public static MainActivity mainActivity;
-	private LocationService locationService;
+	public LocationService locationService;
 
 	private String locationInfo;
 	NormalTopBar mTopBar;
@@ -40,7 +37,7 @@ public class MainActivity extends BaseActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.frag_container);
+		setContentView(R.layout.fra_container);
 
 		mainActivity = this;
 
@@ -88,28 +85,26 @@ public class MainActivity extends BaseActivity {
 	/***
 	 * Stop location service
 	 */
-	@Override
+/*	@Override
 	protected void onStop() {
 		// TODO Auto-generated method stub
 		locationService.unregisterListener(mListener); //注销掉监听
 		locationService.stop(); //停止定位服务
 		super.onStop();
-	}
-
+	}*/
 	@Override
 	protected void onStart() {
 		super.onStart();
 		// -----------location config ------------
-		locationService = ((ChatApplication) getApplication()).locationService;
+	/*	locationService = ((ChatApplication) getApplication()).locationService;
 		//获取locationservice实例，建议应用中只初始化1个location实例，然后使用，可以参考其他示例的activity，都是通过此种方式获取locationservice实例的
 		locationService.registerListener(mListener);
-		locationService.start();
+		locationService.start();*/
 	}
-
 	/*****
 	 *定位结果回调，重写onReceiveLocation方法，可以直接拷贝如下代码到自己工程中修改
 	 */
-	private BDLocationListener mListener = new BDLocationListener() {
+	/*private BDLocationListener mListener = new BDLocationListener() {
 		@Override
 		public void onReceiveLocation(BDLocation location) {
 			// TODO Auto-generated method stub
@@ -122,7 +117,7 @@ public class MainActivity extends BaseActivity {
 
 			}
 		}
-	};
+	};*/
 
 
 	@Override
@@ -165,7 +160,7 @@ public class MainActivity extends BaseActivity {
 		transaction.commit();
 	}
 
-/*/////////////////////////////////////////////////////////////////
+/*****************************************************************
 
  * 手机找回
  * 锁屏和清除数据
@@ -216,5 +211,6 @@ public class MainActivity extends BaseActivity {
 		intent.putExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN, adminComponent);
 		//intent.putExtra(DevicePolicyManager.EXTRA_ADD_EXPLANATION, "开启后可锁屏");
 		startActivity(intent);
+
 	}
 }

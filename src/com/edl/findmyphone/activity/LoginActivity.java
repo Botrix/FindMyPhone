@@ -51,6 +51,7 @@ public class LoginActivity extends BaseActivity implements OnClickListener {
 		mTopBar = (NormalTopBar) findViewById(R.id.activity_login_top_bar);
 		mTopBar.setOnBackListener(this);
 
+
 		fm = getSupportFragmentManager();
 		enterFlag = getIntent().getIntExtra(ENTER_KEY, ENTER_FIRST);
 

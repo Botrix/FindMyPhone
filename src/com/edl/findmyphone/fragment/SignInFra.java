@@ -32,7 +32,6 @@ public class SignInFra extends BaseFragment implements OnClickListener {
 	private EditText etAccount;
 	private EditText etPwd;
 	private Button btnSignIn;
-
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {

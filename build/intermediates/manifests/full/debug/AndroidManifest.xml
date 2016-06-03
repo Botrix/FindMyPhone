@@ -24,6 +24,8 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.FLASHLIGHT" />
 
+    <!-- <uses-permission android:name="android.permission.WRITE_APN_SETTINGS"/> -->
+
     <uses-feature
         android:name="android.hardware.screen.landscape"
         android:required="false" />
@@ -66,12 +68,36 @@
             </intent-filter>
         </activity>
 
-        <!--
-             <receiver android:name=".receiver.BootCompletedReceiver" >
+        <receiver android:name="com.edl.findmyphone.receiver.BootCompletedReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <!-- <category android:name="android.intent.category.HOME"/> -->
+            </intent-filter>
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+                <data android:scheme="package" />
+            </intent-filter>
+            -->
+        </receiver>
+        <receiver android:name="com.edl.findmyphone.receiver.UserPresentReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
             </intent-filter>
         </receiver>
+
+        <!--
+        <receiver android:name=".service.CoreService$UserPresentReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+            </intent-filter>
+        </receiver>
+        -->
+
+
+        <!--
         <receiver android:name=".receiver.ConnectedReceiver" >
             <intent-filter>
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
@@ -79,12 +105,15 @@
         </receiver>
         -->
 
-        <service android:name="com.edl.findmyphone.service.CoreService" >
+        <service
+            android:name="com.edl.findmyphone.service.CoreService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=".coreService" >
         </service>
         <service
             android:name="com.baidu.location.f"
-            android:enabled="true"
-            android:process=":remote" >
+            android:enabled="true" >
             <intent-filter>
                 <action android:name="com.baidu.location.service_v2.2" >
                 </action>

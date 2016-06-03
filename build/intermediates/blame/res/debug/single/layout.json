@@ -1,42 +1,42 @@
 [
     {
-        "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
-        "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\layout\\activity_main.xml"
+        "merged": "C:\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\layout\\fra_settings.xml",
+        "source": "C:\\FindMyPhone\\res\\layout\\fra_settings.xml"
     },
     {
-        "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\layout\\fra_main.xml",
-        "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\layout\\fra_main.xml"
+        "merged": "C:\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\layout\\fra_container.xml",
+        "source": "C:\\FindMyPhone\\res\\layout\\fra_container.xml"
     },
     {
-        "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\layout\\frag_container.xml",
-        "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\layout\\frag_container.xml"
+        "merged": "C:\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "C:\\FindMyPhone\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\layout\\fra_sign_up.xml",
-        "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\layout\\fra_sign_up.xml"
+        "merged": "C:\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\layout\\fra_main.xml",
+        "source": "C:\\FindMyPhone\\res\\layout\\fra_main.xml"
     },
     {
-        "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_settings.xml",
-        "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\layout\\fragment_settings.xml"
+        "merged": "C:\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\layout\\bar_normal.xml",
+        "source": "C:\\FindMyPhone\\res\\layout\\bar_normal.xml"
     },
     {
-        "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\layout\\fra_sign_in.xml",
-        "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\layout\\fra_sign_in.xml"
+        "merged": "C:\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\layout\\fra_find.xml",
+        "source": "C:\\FindMyPhone\\res\\layout\\fra_find.xml"
     },
     {
-        "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\layout\\bar_normal.xml",
-        "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\layout\\bar_normal.xml"
+        "merged": "C:\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\layout\\act_login.xml",
+        "source": "C:\\FindMyPhone\\res\\layout\\act_login.xml"
     },
     {
-        "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\layout\\fra_logo.xml",
-        "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\layout\\fra_logo.xml"
+        "merged": "C:\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\layout\\fra_logo.xml",
+        "source": "C:\\FindMyPhone\\res\\layout\\fra_logo.xml"
     },
     {
-        "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\layout\\act_login.xml",
-        "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\layout\\act_login.xml"
+        "merged": "C:\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\layout\\fra_sign_up.xml",
+        "source": "C:\\FindMyPhone\\res\\layout\\fra_sign_up.xml"
     },
     {
-        "merged": "C:\\Users\\edl\\Desktop\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_find.xml",
-        "source": "C:\\Users\\edl\\Desktop\\FindMyPhone\\res\\layout\\fragment_find.xml"
+        "merged": "C:\\FindMyPhone\\build\\intermediates\\res\\merged\\debug\\layout\\fra_sign_in.xml",
+        "source": "C:\\FindMyPhone\\res\\layout\\fra_sign_in.xml"
     }
 ]
