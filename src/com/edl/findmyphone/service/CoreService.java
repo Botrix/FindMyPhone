@@ -1,7 +1,6 @@
 package com.edl.findmyphone.service;
 
 import android.app.AlarmManager;
-import android.app.Notification;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -9,9 +8,11 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.net.ConnectivityManager;
 import android.os.IBinder;
+import android.os.Process;
 import android.os.SystemClock;
 import android.util.Log;
 
+import com.edl.findmyphone.ChatApplication;
 import com.edl.findmyphone.R;
 import com.edl.findmyphone.action.Action;
 import com.edl.findmyphone.base.BaseService;
@@ -26,9 +27,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CoreService extends BaseService implements HMConnectListener, OnPushListener {
-	
-	private HMChatManager chatManager;
-	private AccountDao accountDao;
+
+	public static LocationService locationService;
+	public static String lat;
+	public static String lng;
+
+	private static HMChatManager chatManager;
+	private static AccountDao accountDao;
 
 	private int reconnectCount = 0;// 重连次数
 
@@ -49,11 +54,30 @@ public class CoreService extends BaseService implements HMConnectListener, OnPus
 		}
 	};
 
+
 	@Override
 	public IBinder onBind(Intent intent) {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public int onStartCommand(Intent intent, int flags, int startId) {
+		//Make this service run in the foreground
+		/*Notification notification = new Notification();
+		notification.flags = Notification.FLAG_ONGOING_EVENT;
+		notification.flags |= Notification.FLAG_NO_CLEAR;
+		notification.flags |= Notification.FLAG_FOREGROUND_SERVICE;
+
+		startForeground(1, notification);*/
+
+		//startForeground(-1213, new Notification());
+
+
+
+		return START_STICKY;
+	}
+
 
 	@Override
 	public void onCreate() {
@@ -69,23 +93,33 @@ public class CoreService extends BaseService implements HMConnectListener, OnPus
 		mFilter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
 		registerReceiver(mReceiver, mFilter);
 
+
+		locationService = ((ChatApplication) getApplication()).locationService;
+		//locationService.registerListener(mListener);
+
+		int pid = Process.myPid();
+		Log.i("Process-pid", String.valueOf(pid));
+
 		scanClass();
-	}
 
-	@Override
-	public int onStartCommand(Intent intent, int flags, int startId) {
-		//Make this service run in the foreground
-		Notification notification = new Notification();
-		notification.flags = Notification.FLAG_ONGOING_EVENT;
-		notification.flags |= Notification.FLAG_NO_CLEAR;
-		notification.flags |= Notification.FLAG_FOREGROUND_SERVICE;
-		startForeground(0, notification);
+/*
 
-		Account account = accountDao.getCurrentAccount();
-		if (account != null) {
-			chatManager.auth(account.getAccount(), account.getToken());
-		}
-		return START_STICKY;
+		//获取AlarmManager系统服务
+		AlarmManager manager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+
+		//包装需要执行Service的Intent
+		Intent i = new Intent(getApplicationContext(), CoreService.class);
+		//intent.setAction(action);
+		PendingIntent pendingIntent = PendingIntent.getService(getApplicationContext(), 0,
+				i, PendingIntent.FLAG_UPDATE_CURRENT);
+
+		//触发服务的起始时间
+		long triggerAtTime = SystemClock.elapsedRealtime();
+
+		//使用AlarmManger的setRepeating方法设置定期执行的时间间隔（seconds秒）和需要执行的Service
+		manager.setRepeating(AlarmManager.ELAPSED_REALTIME, triggerAtTime,
+				60 * 1000, pendingIntent);
+				*/
 	}
 
 	@Override
@@ -102,7 +136,6 @@ public class CoreService extends BaseService implements HMConnectListener, OnPus
 
 	@Override
 	public void onTaskRemoved(Intent rootIntent) {
-		Log.i("CoreService", "onTaskRemoved >>>>>>>>" + this.getClass());
 		Intent restartServiceIntent = new Intent(getApplicationContext(), this.getClass());
 		restartServiceIntent.setPackage(getPackageName());
 
@@ -115,22 +148,10 @@ public class CoreService extends BaseService implements HMConnectListener, OnPus
 				SystemClock.elapsedRealtime() + 2000,
 				restartServicePendingIntent);
 
-		Log.i("CoreService", "onTaskRemoved-->restart CoreService" + this.getClass());
-		//super.onTaskRemoved(rootIntent);
+		super.onTaskRemoved(rootIntent);
 	}
 
-
-/*
-	@Override
-	public void onTaskRemoved(Intent rootIntent) {
-		Intent intent = new Intent(this, TargetActivity.class);
-		intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-		startActivity(intent);
-	}
-*/
-
-
-	private void connectServer() {
+	public static void connectServer() {
 		Account account = accountDao.getCurrentAccount();
 		if (account != null) {
 			chatManager.auth(account.getAccount(), account.getToken());
@@ -179,7 +200,7 @@ public class CoreService extends BaseService implements HMConnectListener, OnPus
 	}
 
 	private void scanClass() {
-	
+
 		String[] array = getResources().getStringArray(R.array.actions);
 
 		if (array == null) {
@@ -216,9 +237,30 @@ public class CoreService extends BaseService implements HMConnectListener, OnPus
 		boolean flag = false;
 		Action actioner = actionMaps.get(action);
 		if (actioner != null) {
-			flag =actioner.doAction(this, data);
+			flag = actioner.doAction(this, data);
 		}
 
 		return flag;
 	}
+
+
+
+
+	/*****
+	 *定位结果回调，重写onReceiveLocation方法，可以直接拷贝如下代码到自己工程中修改
+	 */
+/*	private BDLocationListener mListener = new BDLocationListener() {
+		@Override
+		public void onReceiveLocation(BDLocation location) {
+			// TODO Auto-generated method stub
+			if (null != location && location.getLocType() != BDLocation.TypeServerError) {
+				String locationInfo = "手机定位："+location.getLatitude() + "---" + location.getLongitude();
+				System.out.println(locationInfo);
+
+				lat = String.valueOf(location.getLatitude());
+				lng = String.valueOf(location.getLongitude());
+
+			}
+		}
+	};*/
 }

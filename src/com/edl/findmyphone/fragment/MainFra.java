@@ -1,6 +1,10 @@
 package com.edl.findmyphone.fragment;
 
 
+import android.app.admin.DevicePolicyManager;
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -12,12 +16,17 @@ import android.widget.RelativeLayout;
 
 import com.edl.findmyphone.R;
 import com.edl.findmyphone.MainActivity;
+import com.edl.findmyphone.receiver.MyAdmin;
 import com.edl.findmyphone.widget.NormalTopBar;
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class MainFra extends Fragment implements View.OnClickListener {
+    public static DevicePolicyManager devicePolicyManager;
+    ComponentName adminComponent;
+    public static boolean isAdminActive;
+
     RelativeLayout rl_settings;
     RelativeLayout rl_find ;
 
@@ -42,9 +51,27 @@ public class MainFra extends Fragment implements View.OnClickListener {
         rl_settings.setOnClickListener(this);
         rl_find.setOnClickListener(this);
 
+
+        devicePolicyManager = (DevicePolicyManager)
+                getActivity().getSystemService(Context.DEVICE_POLICY_SERVICE);
+        adminComponent = new ComponentName(getActivity(),MyAdmin.class);
+        isAdminActive = devicePolicyManager.isAdminActive(adminComponent);
+
         return view;
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        Log.i("MainFra->onStart", "Whether active admin");
+        if (!isAdminActive) {
+            Intent intent = new Intent(DevicePolicyManager.ACTION_ADD_DEVICE_ADMIN);
+            intent.putExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN, adminComponent);
+            intent.putExtra(DevicePolicyManager.EXTRA_ADD_EXPLANATION, "使用手机找回功能，需要激活设备管理器");
+            startActivity(intent);
+        }
+    }
 
     @Override
     public void onClick(View v) {

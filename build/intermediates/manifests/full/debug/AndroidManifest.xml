@@ -66,12 +66,12 @@
             </intent-filter>
         </activity>
 
-        <!--
-        <receiver android:name=".receiver.BootCompletedReceiver" >
+        <receiver android:name="com.edl.findmyphone.receiver.BootCompletedReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
+        <!--
         <receiver android:name=".receiver.ConnectedReceiver" >
             <intent-filter>
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
@@ -79,13 +79,28 @@
         </receiver>
         -->
 
+        <receiver android:name="com.edl.findmyphone.receiver.UserPresentReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+
+        <!--
+        <service
+            android:enabled="true"
+            android:exported="true"
+            android:name="com.edl.findmyphone.service.CoreService" >
+            <intent-filter android:priority="1000">
+                <action android:name="com.edl.findmyphone.MYCORESERVICE"/>
+            </intent-filter>
+        </service>
+        -->
+
         <service
             android:name="com.edl.findmyphone.service.CoreService"
             android:enabled="true"
-            android:exported="true" >
-            <intent-filter android:priority="1000" >
-                <action android:name="com.edl.findmyphone.MYCORESERVICE" />
-            </intent-filter>
+            android:exported="true"
+            android:process=".coreService" >
         </service>
         <service
             android:name="com.baidu.location.f"

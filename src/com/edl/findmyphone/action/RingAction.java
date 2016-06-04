@@ -3,6 +3,7 @@ package com.edl.findmyphone.action;
 import android.content.Context;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.util.Log;
 
 import com.edl.findmyphone.R;
 
@@ -47,8 +48,18 @@ public class RingAction extends Action {
 		//一直播放音乐
 		mediaPlayer.setLooping(true);
 		mediaPlayer.start();
+		Log.i("RingAction", "start play");
+		try {
+			Thread.sleep(20 * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 
-       return true;
+		mediaPlayer.stop();
+		mediaPlayer.release();
+
+
+		return true;
 
 	}
 

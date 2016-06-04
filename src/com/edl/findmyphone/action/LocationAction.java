@@ -3,10 +3,13 @@ package com.edl.findmyphone.action;
 import android.content.Context;
 import android.util.Log;
 
+import com.baidu.location.BDLocation;
+import com.baidu.location.BDLocationListener;
 import com.edl.findmyphone.db.AccountDao;
 import com.edl.findmyphone.domain.Account;
 import com.edl.findmyphone.lib.HMChatManager;
 import com.edl.findmyphone.lib.HMURL;
+import com.edl.findmyphone.service.CoreService;
 import com.lidroid.xutils.HttpUtils;
 import com.lidroid.xutils.http.RequestParams;
 import com.lidroid.xutils.http.ResponseInfo;
@@ -32,10 +35,11 @@ public class LocationAction extends Action {
 		}
 
 
+		CoreService.locationService.registerListener(mListener);
+		CoreService.locationService.start();
 
-
-		/*String receiver = data.get("receiver").toString();
-		String sender = data.get("sender").toString(); */
+		String receiver = data.get("receiver").toString();
+		String sender = data.get("sender").toString();
 		AccountDao dao = new AccountDao(context);
 		final Account account = dao.getCurrentAccount();
 
@@ -68,5 +72,23 @@ public class LocationAction extends Action {
        return true;
 
 	}
+
+	/*****
+	 *定位结果回调，重写onReceiveLocation方法，可以直接拷贝如下代码到自己工程中修改
+	 */
+	private BDLocationListener mListener = new BDLocationListener() {
+		@Override
+		public void onReceiveLocation(BDLocation location) {
+			// TODO Auto-generated method stub
+			if (null != location && location.getLocType() != BDLocation.TypeServerError) {
+				String locationInfo = "手机定位："+location.getLatitude() + "---" + location.getLongitude();
+				System.out.println(locationInfo);
+
+				lat = String.valueOf(location.getLatitude());
+				lng = String.valueOf(location.getLongitude());
+
+			}
+		}
+	};
 
 }

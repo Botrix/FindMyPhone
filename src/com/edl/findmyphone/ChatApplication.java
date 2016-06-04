@@ -31,7 +31,8 @@ public class ChatApplication extends Application {
 	public void onCreate() {
 		super.onCreate();
 		pid = Process.myPid();
-		
+		Log.i("Process-pid", String.valueOf(pid));
+		Log.d("ChatApplication", "init");
 		Log.d("ChatApplication", "init");
 		// 初始化
 		HMChat.getInstance().init(this);
